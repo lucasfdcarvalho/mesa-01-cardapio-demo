@@ -1,0 +1,16 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.openai/local/
+.wrangler/
+coverage/
+tmp/
+screenshots/
+*.pem
+*.key
+*.p12
+credentials*.json
+secrets*.json

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4eb">
+  <meta name="description" content="Mesa 01: demonstração fictícia de um cardápio digital para padaria e café. Explore os itens e simule uma solicitação, sem enviar pedidos ou dados.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Mesa 01 — padaria & café · demonstração</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script type="module" src="/assets/js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="demo-notice"><span class="notice-dot" aria-hidden="true"></span><span>Demonstração de portfólio <span aria-hidden="true">·</span> marca e cardápio fictícios <span aria-hidden="true">·</span> não recebe pedidos</span></div>
+  <header class="site-header shell">
+    <a class="wordmark" href="#inicio" aria-label="Mesa 01 — início">mesa<span>01</span><small>PADARIA & CAFÉ</small></a>
+    <nav aria-label="Navegação principal">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#encontros">Encontros</a>
+      <a href="#sobre" aria-label="Sobre esta demonstração">Sobre</a>
+    </nav>
+    <span class="header-note" aria-hidden="true">UMA BOA PAUSA COMEÇA AQUI.</span>
+  </header>
+  <main id="conteudo">
+    <section class="hero shell" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="small-rule" aria-hidden="true"></span>À MESA, O TEMPO É OUTRO.</p>
+        <h1 id="hero-title">Pão, café &<br><em>boas pausas.</em></h1>
+        <p class="hero-intro">Do primeiro café ao último pedaço. Uma seleção de sabores para os pequenos encontros do dia.</p>
+        <div class="hero-actions">
+          <a class="button button-rust" href="#cardapio">Explorar cardápio <svg class="icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+          <a class="text-link" href="#encontros">Encomendas & encontros <svg class="icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true" focusable="false"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></a>
+        </div>
+        <div class="hero-footnote"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M9 16h18v7a9 9 0 0 1-18 0v-7ZM27 17h3a4 4 0 0 1 0 8h-3M6 33h24M13 10c-4-4 4-5 0-9M21 10c-4-4 4-5 0-9"/></svg><p>O simples tem seu lugar.<br><span>E um café para acompanhar.</span></p></div>
+      </div>
+      <figure class="hero-figure">
+        <div class="hero-image-wrap"><img src="/assets/hero-padaria.webp" srcset="/assets/hero-padaria-800.webp 800w, /assets/hero-padaria.webp 1536w" sizes="(max-width: 800px) calc(100vw - 40px), 51vw" width="1536" height="1024" alt="Composição ilustrativa de pães, pão de queijo, sanduíche, bolo e uma xícara de café sobre a mesa." fetchpriority="high"></div>
+        <figcaption><span>UM POUCO DE TUDO, À MESA.</span><span>Imagem ilustrativa gerada com IA</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="menu-section shell section-space" id="cardapio" aria-labelledby="menu-title">
+      <div class="section-heading">
+        <div><p class="eyebrow section-number">01 / O CARDÁPIO</p><h2 id="menu-title">Qual é a sua<br><em>pausa de hoje?</em></h2></div>
+        <div class="section-intro"><p class="menu-intro-copy">Pães para dividir. Doces para ficar mais um pouco. Café para acompanhar.</p><p class="example-note">Itens e preços fictícios, sem oferta de venda.</p></div>
+      </div>
+      <div class="menu-controls" id="menu-controls" hidden>
+        <div class="filter-buttons" role="group" aria-label="Filtrar cardápio por categoria">
+          <button type="button" class="filter active" data-category="all" aria-pressed="true">Tudo <span>10</span></button>
+          <button type="button" class="filter" data-category="paes" aria-pressed="false">Pães</button>
+          <button type="button" class="filter" data-category="doces" aria-pressed="false">Doces</button>
+          <button type="button" class="filter" data-category="cafes" aria-pressed="false">Cafés</button>
+        </div>
+        <div class="search-box"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><label class="sr-only" for="menu-search">Buscar no cardápio</label><input type="search" id="menu-search" placeholder="O que você procura?" maxlength="64" autocomplete="off" spellcheck="false"></div>
+      </div>
+      <div class="results-line"><p id="results-count" role="status" aria-live="polite" aria-atomic="true">10 itens no cardápio</p><button id="reset-filters" class="reset-link" type="button" hidden>Limpar filtros <svg class="icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true" focusable="false"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/></svg></button></div>
+      <div id="menu-results"><!-- MENU_ITEMS --></div>
+      <div class="empty-state" id="empty-state" hidden><svg class="icon-svg empty-mark" viewBox="0 0 24 24" width="48" height="48" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8"/><path d="m5 21 14-18"/></svg><h3>Nenhum item por aqui.</h3><p>Tente outro termo ou volte ao cardápio completo.</p><button class="button button-olive" type="button" id="empty-reset">Ver todo o cardápio <svg class="icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true" focusable="false"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></button></div>
+      <noscript><p class="noscript-note">O cardápio completo está disponível acima. Ative o JavaScript para usar a busca e a simulação local.</p></noscript>
+      <p class="menu-bottom-note">Em um atendimento real, ingredientes, alergênicos e disponibilidade devem ser confirmados com o estabelecimento.</p>
+    </section>
+
+    <section class="gathering" id="encontros" aria-labelledby="gathering-title">
+      <div class="shell gathering-grid">
+        <div class="gathering-copy"><p class="eyebrow section-number">02 / PARA COMPARTILHAR</p><h2 id="gathering-title">Mais gente.<br><em>Mais à mesa.</em></h2><p>Uma reunião que merece uma pausa. Um café da manhã em equipe. Um encontro sem ocasião especial.</p><p class="gathering-secondary">Explore um exemplo de solicitação para organizar as primeiras ideias — sem enviar nada.</p><button class="button button-paper" type="button" data-open-composer hidden>Simular solicitação <svg class="icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14"/></svg></button><noscript><p>Ative o JavaScript para abrir o simulador local.</p></noscript><span class="gathering-caption">Apenas um modelo de conversa. Não é uma reserva.</span></div>
+        <div class="gathering-options">
+          <div class="gathering-option"><span class="option-number">01</span><div><h3>Coffee break</h3><p>Pequenos sabores entre uma ideia e outra.</p><span>PÃES · DOCES · CAFÉ</span></div><svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="M12 22h27v12a13.5 13.5 0 0 1-27 0V22ZM39 24h5a6 6 0 0 1 0 12h-5M8 51h35M21 14c-5-5 5-6 0-11M30 14c-5-5 5-6 0-11"/></svg></div>
+          <div class="gathering-option"><span class="option-number">02</span><div><h3>Café da manhã</h3><p>Um começo de dia para dividir.</p><span>PÃES · BOLOS · BOAS PAUSAS</span></div><svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="M7 37c0-15 10-27 21-27s21 12 21 27c0 7-42 7-42 0ZM7 37v6c0 7 42 7 42 0v-6M22 16l-6 9M32 15l-7 12M41 20l-7 10"/></svg></div>
+          <div class="gathering-option"><span class="option-number">03</span><div><h3>Encontros à mesa</h3><p>Escolhas para tornar o simples especial.</p><span>UMA SELEÇÃO PARA A OCASIÃO</span></div><svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="M10 31h36v17H10V31ZM10 31 31 12c5 4 10 11 15 19M10 38h36M31 12V6M27 7h8"/><circle cx="25" cy="25" r="1.5"/><circle cx="34" cy="29" r="1.5"/></svg></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section shell section-space" id="sobre" aria-labelledby="about-title">
+      <div class="about-intro"><p class="eyebrow section-number">03 / SEM COMPLICAÇÃO</p><h2 id="about-title">Do cardápio<br><em>à conversa.</em></h2><p>Esta é uma demonstração de como um cardápio claro pode ajudar a começar um atendimento.</p><div class="process-steps"><p><span>01</span> Explore os sabores.</p><p><span>02</span> Escolha a ocasião.</p><p><span>03</span> Confira um texto de exemplo.</p></div></div>
+      <div class="faq"><h3 class="faq-heading">Antes de começar</h3><details><summary>Este site recebe pedidos?<svg class="icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><div><p>Não. Mesa 01 é uma marca fictícia criada para uma demonstração de portfólio. Não há estabelecimento, venda, reserva ou envio de solicitações por este site.</p></div></details><details><summary>O que acontece na simulação?<svg class="icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><div><p>Você escolhe uma ocasião e, se quiser, uma quantidade de pessoas e uma data. O site monta um texto de exemplo no próprio navegador. Nada é enviado. Não informe dados pessoais.</p></div></details><details><summary>Os preços e as imagens são reais?<svg class="icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><div><p>Os itens e valores são fictícios e servem apenas para demonstrar a apresentação do cardápio. A imagem é ilustrativa, gerada com IA, e não representa produtos de um estabelecimento real.</p></div></details><details><summary>A simulação salva meus dados?<svg class="icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary><div><p>Não. As escolhas ficam somente na página enquanto ela estiver aberta. Não há cadastro, cookies, analytics ou armazenamento da simulação. Copiar o exemplo é uma ação opcional para a sua área de transferência.</p></div></details></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-main"><a class="wordmark footer-wordmark" href="#inicio" aria-label="Mesa 01 — voltar ao início">mesa<span>01</span><small>PADARIA & CAFÉ</small></a><p>Uma boa pausa.<br><em>Uma ideia bem apresentada.</em></p><a class="footer-top" href="#inicio">Voltar ao início <svg class="icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true" focusable="false"><path d="M12 20V4m-7 7 7-7 7 7"/></svg></a></div><div class="shell footer-bottom"><p>Projeto de portfólio · Marca, cardápio e preços fictícios.</p><p>Sem pedidos. Sem cadastro. Sem coleta pela aplicação.</p></div></footer>
+
+  <dialog id="request-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-intro">
+    <div class="dialog-inner"><button class="dialog-close" type="button" id="close-dialog" aria-label="Fechar simulação"><svg class="icon-svg" viewBox="0 0 24 24" width="24" height="24" fill="none" aria-hidden="true" focusable="false"><path d="m6 6 12 12M6 18 18 6"/></svg></button><p class="eyebrow">APENAS UMA SIMULAÇÃO</p><h2 id="dialog-title">Vamos imaginar<br><em>esse encontro?</em></h2><p id="dialog-intro">Escolha uma ocasião para montar um texto de exemplo. <strong>Não informe dados pessoais.</strong> Nada será enviado.</p>
+      <form id="request-form" novalidate>
+        <div class="form-field"><label for="occasion">Qual é a ocasião?</label><select id="occasion" name="occasion"><option value="coffee-break">Coffee break</option><option value="cafe-da-manha">Café da manhã</option><option value="encontro">Encontro à mesa</option></select><p class="field-error" id="occasion-error" hidden></p></div>
+        <div class="form-row"><div class="form-field"><label for="people">Pessoas <span>(opcional)</span></label><input type="number" id="people" name="people" placeholder="Ex.: 12" min="1" max="300" step="1" inputmode="numeric" autocomplete="off"><p class="field-error" id="people-error" hidden></p></div><div class="form-field"><label for="date">Data <span>(opcional)</span></label><input type="date" id="date" name="date" min="1900-01-01" max="2100-12-31" autocomplete="off"><p class="field-error" id="date-error" hidden></p></div></div>
+        <div class="preview-heading"><label for="enquiry-preview">Seu texto de exemplo</label><span>NÃO ENVIADO</span></div><textarea id="enquiry-preview" readonly rows="7" spellcheck="false" aria-describedby="copy-status"></textarea>
+        <button class="button button-rust copy-button" id="copy-enquiry" type="button">Copiar texto de exemplo <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="8" y="8" width="12" height="13" rx="1"/><path d="M15 8V3H3v13h5"/></svg></button><p id="copy-status" role="status" aria-live="polite">Copiar não envia uma mensagem nem confirma um pedido.</p>
+      </form>
+    </div>
+  </dialog>
+</body>
+</html>

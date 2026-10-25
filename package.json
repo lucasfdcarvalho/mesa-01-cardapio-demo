@@ -1,0 +1,14 @@
+{
+  "name": "mesa-01-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Demonstração fictícia, estática e sem coleta de dados para padaria e café.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test",
+    "check": "npm run build && npm test"
+  },
+  "engines": { "node": ">=20" }
+}
